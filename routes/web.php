@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\BlogController as BackendBlogController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +28,9 @@ Route::get('/blog', [BlogController::class, 'blog'])->name('blog'); // Updated t
 Route::get('/blog/{id}', [BlogController::class, 'detail'])->name('blog.detail'); // Include {id} for detail
 Route::get('/slider', [HomeController::class, 'slider'])->name('slider');
 
+//backend login
+Route::get('/backend/login',[LoginController::class,'index'])->name('login');
+//backend
+Route::get('backend/slider',[SliderController::class,'index'])->name('backend.slider');
+Route::get('backend/service',[ServiceController::class,'index'])->name('backend.service');
+Route::get('backend/blog',[BackendBlogController::class,'index'])->name('backend.blog');
