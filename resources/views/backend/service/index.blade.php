@@ -18,15 +18,18 @@
                                                 <th>Id</th>
                                                 <th>Judul</th>
                                                 <th>Deksripsi</th>
-                                                <th>Aksi</th>
+                                            
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($ManggilServices as $item)
+
                                             <tr>
-                                                <td>1</td>
-                                                <td>Contoh Judul Blog</td>
-                                                <td>Tunggu dikit lagi</td>
-                                                <td>
+                                                <td>{{$item->id}}</td>
+                                                <td>{{$item->title}}</td>
+                                                <td>{{$item->description}}</td>
+
+                                            <td>
                                                     <a href="link-to-edit-blog.html" class="btn btn-warning">edit</a>
                                                     <form action="link-to-delete-blog" method="post" class="d-inline">
                                                         <input type="hidden" name="_token" value="csrf_token_here">
@@ -36,6 +39,7 @@
                                             </tr>
                                             <!-- Tambahkan lebih banyak baris di sini sesuai kebutuhan -->
                                         </tbody>
+                                        @endforeach
                                     </table>
                                 </div>
                             </div>

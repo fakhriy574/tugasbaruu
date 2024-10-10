@@ -23,11 +23,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($ManggilSlider as $item)
                             <tr>
-                                <td>1</td>
-                                <td>Contoh Judul Blog</td>
-                                <td>1 jam kemudian</td>
-                                <td><img src="path/to/image1.jpg" width="200" alt="images"></td>
+                                <td>{{$item->id}}</td>
+                                <td>{{$item->title}}</td>
+                                <td>{{$item->description}}</td>
+                                <td><img src="{{asset($item->file)}}"
+                                    width="200" alt="images"
+                                    ></td>
                                 <td>
                                     <a href="link-to-edit-blog.html" class="btn btn-warning">edit</a>
                                     <form action="link-to-delete-blog" method="post" class="d-inline">
@@ -37,6 +40,7 @@
                                 </td>
                             </tr>
                         </tbody>
+                        @endforeach
                     </table>
                 </div>
             </div>

@@ -49,7 +49,7 @@
 
             <!-- Nav Item - Slider -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('backend.slider')}}">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Slider</span>
                 </a>
@@ -57,7 +57,7 @@
 
             <!-- Nav Item - Blog -->
             <li class="nav-item">
-                <a class="nav-link" href="blog.html">
+                <a class="nav-link" href="{{route('backend.blog')}}">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Blog</span>
                 </a>
@@ -65,7 +65,7 @@
 
             <!-- Nav Item - Layanan -->
             <li class="nav-item">
-                <a class="nav-link" href="layanan.html">
+                <a class="nav-link" href="{{route('backend.service')}}">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Layanan</span>
                 </a>
