@@ -3,7 +3,7 @@
     <div class="card show mb-4">
         <div class="card-body">
             <h2>Tambah Blog</h2>
-            <form class="user" action="{{route('backend.blog.aksi_tambah')}}" method="post">
+            <form class="user" action="{{route('backend.blog.aksi_tambah')}}" enctype="multipart/form-data" method="POST">
                 @csrf
                 <div class="form-group">
                     <input type="text" name="title" class="form-control form-control-user"
@@ -24,3 +24,4 @@
             </form>
         </div>
     </div>
+@endsection
