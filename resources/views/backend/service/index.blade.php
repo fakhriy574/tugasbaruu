@@ -18,7 +18,7 @@
                                                 <th>Id</th>
                                                 <th>Judul</th>
                                                 <th>Deksripsi</th>
-                                            
+
                                             </tr>
                                         </thead>
                                         <tbody>
